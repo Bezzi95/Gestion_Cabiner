@@ -1,4 +1,5 @@
 using CabinetWebAPI.Model;
+using CabinetWebAPI.Model.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,6 +37,15 @@ namespace CabinetWebAPI
             });
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+
+            services.AddScoped<IMedcineRepository, MedcineRepository>();
+            services.AddScoped<IPatientRepository, PatientRepository>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<ISexeRepository, SexeRepository>();
+            services.AddScoped<ISpecialiteRepository, SpecialiteRepository>();
+            services.AddScoped<IVilleRepository, VilleRepository>();
+
+
             services.AddControllers();
 
         }
