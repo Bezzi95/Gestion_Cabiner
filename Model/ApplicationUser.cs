@@ -7,6 +7,7 @@ namespace CabinetWebAPI.Model
 {
     public class ApplicationUser : IdentityUser
     {
+
         public string type { get; set; }
         public virtual ICollection<Medcine> Medcines { get; set; }
     }

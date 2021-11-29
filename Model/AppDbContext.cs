@@ -13,11 +13,14 @@ namespace CabinetWebAPI.Model
         }
 
         public DbSet<Medcine> Medcines { get; set; }
+        public DbSet<Patient> Patients { get; set; }
         public DbSet<Sexe> Sexes { get; set; }
         public DbSet<Specialite> Specialites { get; set; }
         public DbSet<Ville> Villes { get; set; }
         public DbSet<Rendez_vous> Rendez_Vous { get; set; }
         public DbSet<Role> Roles { get; set; }
+
+        
 
     }
 }

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CabinetWebAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211128213135_InitialCreate")]
+    [Migration("20211129122853_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,6 +91,9 @@ namespace CabinetWebAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Patientid")
+                        .HasColumnType("int");
+
                     b.Property<int>("Sexeid")
                         .HasColumnType("int");
 
@@ -120,6 +123,8 @@ namespace CabinetWebAPI.Migrations
 
                     b.HasKey("id");
 
+                    b.HasIndex("Patientid");
+
                     b.HasIndex("Sexeid");
 
                     b.HasIndex("Specialiteid");
@@ -129,6 +134,44 @@ namespace CabinetWebAPI.Migrations
                     b.HasIndex("Villeid");
 
                     b.ToTable("Medcines");
+                });
+
+            modelBuilder.Entity("CabinetWebAPI.Model.Patient", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Adresse")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date_naiss")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telephone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nom")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("photo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("prenom")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Patients");
                 });
 
             modelBuilder.Entity("CabinetWebAPI.Model.Rendez_vous", b =>
@@ -225,6 +268,12 @@ namespace CabinetWebAPI.Migrations
 
             modelBuilder.Entity("CabinetWebAPI.Model.Medcine", b =>
                 {
+                    b.HasOne("CabinetWebAPI.Model.Patient", "Patient")
+                        .WithMany("Medcines")
+                        .HasForeignKey("Patientid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("CabinetWebAPI.Model.Sexe", "Sexe")
                         .WithMany("Medcines")
                         .HasForeignKey("Sexeid")
@@ -246,6 +295,8 @@ namespace CabinetWebAPI.Migrations
                         .HasForeignKey("Villeid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Patient");
 
                     b.Navigation("Sexe");
 
@@ -274,6 +325,11 @@ namespace CabinetWebAPI.Migrations
                 });
 
             modelBuilder.Entity("CabinetWebAPI.Model.ApplicationUser", b =>
+                {
+                    b.Navigation("Medcines");
+                });
+
+            modelBuilder.Entity("CabinetWebAPI.Model.Patient", b =>
                 {
                     b.Navigation("Medcines");
                 });

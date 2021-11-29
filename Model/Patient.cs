@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CabinetWebAPI.Model
 {
-    public class Medcine
+    public class Patient
     {
+
         public int id { get; set; }
         [Required]
         public string nom { get; set; }
@@ -25,23 +24,8 @@ namespace CabinetWebAPI.Model
         [DisplayName("Photo de profil")]
         public string photo { get; set; }
 
+        public DateTime Date_naiss { get; set; }
 
-        public string UserId { get; set; }
-        public virtual ApplicationUser User { get; set; }
-
-
-
-        public Patient Patient { get; set; }
-        public int Patientid { get; set; }
-
-
-        public Sexe Sexe { get; set; }
-        public int Sexeid { get; set; }
-
-        public Ville Ville { get; set; }
-        public int Villeid { get; set; }
-
-        public virtual Specialite Specialite { get; set; }
-        public int Specialiteid { get; set; }
+        public ICollection<Medcine> Medcines { get; set; }
     }
 }

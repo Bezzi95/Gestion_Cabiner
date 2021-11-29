@@ -34,6 +34,25 @@ namespace CabinetWebAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Patients",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    nom = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    prenom = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Adresse = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Telephone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Date_naiss = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Patients", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
@@ -97,6 +116,7 @@ namespace CabinetWebAPI.Migrations
                     Telephone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Patientid = table.Column<int>(type: "int", nullable: false),
                     Sexeid = table.Column<int>(type: "int", nullable: false),
                     Villeid = table.Column<int>(type: "int", nullable: false),
                     Specialiteid = table.Column<int>(type: "int", nullable: false)
@@ -110,6 +130,12 @@ namespace CabinetWebAPI.Migrations
                         principalTable: "ApplicationUser",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Medcines_Patients_Patientid",
+                        column: x => x.Patientid,
+                        principalTable: "Patients",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Medcines_Sexes_Sexeid",
                         column: x => x.Sexeid,
@@ -161,6 +187,11 @@ namespace CabinetWebAPI.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Medcines_Patientid",
+                table: "Medcines",
+                column: "Patientid");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Medcines_Sexeid",
                 table: "Medcines",
                 column: "Sexeid");
@@ -204,6 +235,9 @@ namespace CabinetWebAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "ApplicationUser");
+
+            migrationBuilder.DropTable(
+                name: "Patients");
 
             migrationBuilder.DropTable(
                 name: "Sexes");
