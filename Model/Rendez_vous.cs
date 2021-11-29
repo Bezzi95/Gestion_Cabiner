@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace CabinetWebAPI.Model
-{
-    public class Rendez_vous
+{ 
+    public class Rendez_vous /// constlatation ou vissite 
     {
 
         public int Id { get; set; }
@@ -16,6 +16,8 @@ namespace CabinetWebAPI.Model
         public int Medcineid { get; set; }
         public string UserId { get; set; }
         public virtual Medcine Medcine { get; set; }
+
+        public virtual Patient Patient { get; set; }
 
         public virtual ApplicationUser user { get; set; }
 
