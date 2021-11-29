@@ -24,7 +24,7 @@ namespace CabinetWebAPI.Model.Repositories
 
         public async Task<Medcine> DeleteMedcine(int medcineId)
         {
-            var result = await appDbContext.Medcines.FirstOrDefaultAsync(m => m.id == medcineId);
+            var result = await appDbContext.Medcines.SingleOrDefaultAsync(m => m.id == medcineId);
             if (result != null)
             {
                 appDbContext.Medcines.Remove(result);
@@ -40,12 +40,7 @@ namespace CabinetWebAPI.Model.Repositories
             return await appDbContext.Medcines.FirstOrDefaultAsync(m => m.id == medcineId);
         }
 
-        public Task<Medcine> GetMedcineByEmail(string email)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<Medcine> GetMedcineByEmailAsync(string email)
+        public async Task<Medcine> GetMedcineByEmail(string email)
         {
             return await appDbContext.Medcines.FirstOrDefaultAsync(m => m.Email == email);
         }
@@ -57,7 +52,7 @@ namespace CabinetWebAPI.Model.Repositories
 
         public async Task<Medcine> UpdateMedcine(Medcine medcine)
         {
-            var result = await appDbContext.Medcines.FirstOrDefaultAsync(m => m.id == medcine.id);
+            var result = await appDbContext.Medcines.SingleOrDefaultAsync(m => m.id == medcine.id);
 
             if (result != null)
             {
