@@ -36,7 +36,7 @@ namespace CabinetWebAPI.Model.Repositories
 
         public async Task<Patient> GetPatient(int patientId)
         {
-            return await appDbContext.Patients.FirstOrDefaultAsync(p => p.id == patientId);
+           return await appDbContext.Patients.FirstOrDefaultAsync(p => p.id == patientId);
         }
 
         public async Task<Patient> GetPatientByEmail(string email)
