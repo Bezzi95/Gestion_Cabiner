@@ -27,5 +27,9 @@ namespace CabinetWebAPI.Model
         public DateTime Date_naiss { get; set; }
 
         public ICollection<Medcine> Medcines { get; set; }
+
+        public ICollection<Consultation> Consultations { get; set; }
+
+
     }
 }
