@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace CabinetWebAPI.Model.Repositories
 {
+
     public interface IConsultationRepository
     {
         Task<IEnumerable<Consultation>> GetConsultations();
