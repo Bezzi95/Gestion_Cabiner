@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-
 namespace CabinetWebAPI.Migrations
 {
     public partial class cabinet1 : Migration
