@@ -47,6 +47,11 @@ namespace CabinetWebAPI
             services.AddScoped<ISexeRepository, SexeRepository>();
             services.AddScoped<ISpecialiteRepository, SpecialiteRepository>();
             services.AddScoped<IVilleRepository, VilleRepository>();
+            
+            services.AddScoped<IConsultationRepository, ConsultationRepository>();
+
+            services.AddScoped<IRendez_VousRepository, Rendez_VousRepository>();
+
 
 
             services.AddControllers();

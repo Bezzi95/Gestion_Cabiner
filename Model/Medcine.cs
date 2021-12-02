@@ -32,8 +32,7 @@ namespace CabinetWebAPI.Model
 
 
 
-        public Patient Patient { get; set; }
-        public int Patientid { get; set; }
+       
 
         public ICollection<Consultation> Consultations { get; set; }
         
