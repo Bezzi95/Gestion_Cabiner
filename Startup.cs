@@ -76,6 +76,7 @@ namespace CabinetWebAPI
 
             app.UseEndpoints(endpoints =>
             {
+                
                 endpoints.MapControllers();
             });
         }
