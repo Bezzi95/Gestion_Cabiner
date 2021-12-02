@@ -28,6 +28,7 @@ namespace CabinetWebAPI.Controllers
         {
             try
             {
+            
                 return Ok(await consultationRepository.GetConsultations());
             }
             catch (Exception)
