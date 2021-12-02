@@ -7,7 +7,6 @@ namespace CabinetWebAPI.Model
 { 
     public class Rendez_vous 
     {
-
         public int Id { get; set; }
         public DateTime Date_rendez_vous { get; set; }
         public String Status { get; set; }
