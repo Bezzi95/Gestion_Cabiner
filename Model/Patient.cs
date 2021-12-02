@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
 namespace CabinetWebAPI.Model
 {
     public class Patient
@@ -26,9 +25,10 @@ namespace CabinetWebAPI.Model
 
         public DateTime Date_naiss { get; set; }
 
-        public ICollection<Medcine> Medcines { get; set; }
+        
 
         public ICollection<Consultation> Consultations { get; set; }
+        public ICollection<Rendez_vous> Rendez_vouss { get; set; }
 
 
     }

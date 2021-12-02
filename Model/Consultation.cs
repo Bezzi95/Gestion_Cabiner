@@ -17,9 +17,7 @@ namespace CabinetWebAPI.Model
         public int Patientid { get; set; }
         public Medcine Medecin { get; set; }
         public int Medecinid { get; set; }
-        public Rendez_vous Rendez_vous { get; set; }
-        public int Rendez_vousid { get; set; }
-
-
+        public virtual ApplicationUser user { get; set; }
+        public string UserId { get; set; }
     }
 }
