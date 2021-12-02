@@ -30,7 +30,6 @@ namespace CabinetWebAPI.Model.Repositories
             {
                 appDbContext.Consultations.Remove(result);
                 await appDbContext.SaveChangesAsync();
-
                 return result;
             }
             return null;
