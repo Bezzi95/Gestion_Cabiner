@@ -1,0 +1,35 @@
+﻿@page "/PatientDetails/{id}"
+@page "/PatientDetails"
+@inherits PatientDetailsBase
+
+<h3 class="text-center">PatientDetails</h3>
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center">@Patient.prenom  @Patient.nom</h1>
+            </div>
+
+            <div class="cart-body text-center">
+                <img class="card-img-top" src="@Patient.photo" />
+
+                <h4> Patient ID : @Patient.id </h4>
+                <h4> Email : @Patient.Email </h4>
+                <h4> Adresse : @Patient.Adresse </h4>
+                <h4> Telephone : @Patient.Telephone </h4>
+                <h4> Date Naiss : @Patient.Date_naiss.ToShortDateString() </h4>
+            </div>
+            <div class="card-footer text-center">
+                <a href="/" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-primary">Edite</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

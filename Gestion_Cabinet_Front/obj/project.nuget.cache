@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iR/goVJuKUhqmDyGVXIIwhZL9sOgEajqB0JDunn4f1UZcgB8zYVRt0t6xLK7irGI/YHrquVWP46RQmWR5mXB0Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\daoud\\Documents\\IPSAS\\3Ginfo\\.Net core\\Projet\\Gestion_Cabinet_Front\\Gestion_Cabinet_Front\\Gestion_Cabinet_Front.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\daoud\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
