@@ -39,7 +39,11 @@ namespace CabinetWebAPI.Model.Repositories
 
         public async Task<Medcine> GetMedcine(int medcineId)
         {
-            return await appDbContext.Medcines.FirstOrDefaultAsync(m => m.id == medcineId);
+            return await appDbContext.Medcines.
+                Include(m => m.Sexe).
+                Include(m => m.Specialite).
+                Include(m => m.Ville).
+                FirstOrDefaultAsync(m => m.id == medcineId);
         }
 
 

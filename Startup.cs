@@ -43,10 +43,13 @@ namespace CabinetWebAPI
 
             services.AddScoped<IMedcineRepository, MedcineRepository>();
             services.AddScoped<IPatientRepository, PatientRepository>();
-            services.AddScoped<IRoleRepository, RoleRepository>();
+           
             services.AddScoped<ISexeRepository, SexeRepository>();
             services.AddScoped<ISpecialiteRepository, SpecialiteRepository>();
             services.AddScoped<IVilleRepository, VilleRepository>();
+            services.AddScoped<IConsultationRepository, ConsultationRepository>();
+            services.AddScoped<IRendez_VousRepository, Rendez_VousRepository>();
+
 
 
             services.AddControllers();
@@ -71,6 +74,7 @@ namespace CabinetWebAPI
 
             app.UseEndpoints(endpoints =>
             {
+                
                 endpoints.MapControllers();
             });
         }

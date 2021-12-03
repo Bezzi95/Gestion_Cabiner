@@ -18,7 +18,6 @@ namespace CabinetWebAPI.Model
         public DbSet<Specialite> Specialites { get; set; }
         public DbSet<Ville> Villes { get; set; }
         public DbSet<Rendez_vous> Rendez_Vous { get; set; }
-        public DbSet<Role> Roles { get; set; }
         public DbSet<Consultation> Consultations { get; set; }
 
 
