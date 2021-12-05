@@ -19,11 +19,13 @@
                 <h4> Adresse : @Patient.Adresse </h4>
                 <h4> Telephone : @Patient.Telephone </h4>
                 <h4> Date Naiss : @Patient.Date_naiss.ToShortDateString() </h4>
+
+                <button class="btn btn-primary" @onclick="@Button_Click">@ButtonText</button>
             </div>
-            <div class="card-footer text-center">
+            <div class="card-footer text-center @CssClass">
                 <a href="/" class="btn btn-primary">Back</a>
-                <a href="#" class="btn btn-primary">Edite</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <a href="@($"EditPatient/{Patient.id}")" class="btn btn-primary">Edite</a>
+                <a href="@($"DeletePatient/{Patient.id}")" class="btn btn-danger">Delete</a>
 
             </div>
         </div>

@@ -54,3 +54,9 @@ C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Ges
 C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\PatientList.razor.g.cs
 C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\PatientDetails.razor.g.cs
 C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\PatientDetails.razor.g.cs
+C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\EditPatient.razor.g.cs
+C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\EditPatient.razor.g.cs
+C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\CreatePatient.razor.g.cs
+C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\CreatePatient.razor.g.cs
+C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\DeletePatient.razor.g.cs
+C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\DeletePatient.razor.g.cs
