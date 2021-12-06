@@ -10,14 +10,14 @@ namespace Gestion_Cabinet_Front.Pages
 {
     public class EditPatientBase : ComponentBase
     {
-
+        
         public Patient Patient { get; set; } = new Patient();
         [Inject]
         public IPatientService PatientService { get; set; }
 
         [Parameter]
         public string Id { get; set; }
-
+        [Inject]
         public NavigationManager NavigationManager { get; set; }
 
         protected async override Task OnInitializedAsync()

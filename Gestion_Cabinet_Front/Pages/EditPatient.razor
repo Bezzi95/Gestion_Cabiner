@@ -1,7 +1,8 @@
 ﻿@page "/EditPatient/{id}"
 @inherits EditPatientBase
 
-<EditForm Model="@Patient" >
+
+<EditForm Model="@Patient" OnValidSubmit="HandleValidSubmit">
     <h3 class="text-center">EditPatient</h3>
     <hr />
     <ValidationSummary />
@@ -61,13 +62,13 @@
             Date naiss
         </label>
         <div class="col-sm-10">
-            <InputDate  class="form-control"  @bind-Value="Patient.Date_naiss" />
+            <InputDate class="form-control" @bind-Value="Patient.Date_naiss" />
         </div>
     </div>
 
     <button class="btn btn-primary" type="submit"> submit </button>
     <button class="btn btn-danger" type="button" @onclick="Delete_Click"> Delete </button>
 
-</EditForm> 
+</EditForm>
 
 
