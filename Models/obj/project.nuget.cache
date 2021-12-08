@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "vq6naGX7Zjbyd4tDmk363WVqqmVHzfTMwjHPX5j7bpp5ygc3MqPWWzhBIaqPZL5j1ruY8HiK5bZwZ5YmaBASZw==",
+  "dgSpecHash": "7L1ko9JU49ZIy/lQe3Jya0VS2i796tMTABqFDhniMiHQ0plA1C7/vPR4OUYG907nSszGxBDkRwbq8Gzyw/y1bQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\daoud\\Documents\\IPSAS\\3Ginfo\\.Net core\\Projet\\Gestion_Cabinet_Front\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\Ramy\\Source\\Repos\\Gestion_Cabiner\\Models\\Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\daoud\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\daoud\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\daoud\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+    "C:\\Users\\Ramy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ramy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Ramy\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
