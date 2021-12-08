@@ -1,0 +1,37 @@
+﻿@page "/Consultations"
+@inherits ConsultationListBase
+<h3 class="text-center">ConsultationList</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date_Consult</th>
+            <th scope="col">Patient</th>
+            <th scope="col">Medecin</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var consultation in Consultations)
+        {
+        <tr>
+
+            <th scope="row">@consultation.id</th>
+            <td>@consultation.Date_Consult </td>
+
+            <td>@consultation.Patientid </td>
+            <td>@consultation.Medecinid </td>
+            <td>@consultation.resultat</td>
+            <td>
+                <a href="@($"PatientDetails/{consultation.id}")" class="btn btn-primary m-1">View</a>
+                <a href="@($"editconsultation/{consultation.id}")" class="btn btn-primary m-1">Edit</a>
+                <a href="@($"DeletePatient/{consultation.id}")" class="btn btn-danger m-1">Delete</a>
+
+            </td>
+
+        </tr>
+        }
+        </tbody>
+</table>
