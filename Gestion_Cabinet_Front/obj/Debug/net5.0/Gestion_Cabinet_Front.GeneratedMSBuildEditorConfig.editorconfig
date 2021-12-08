@@ -6,3 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = Gestion_Cabinet_Front
+build_property.ProjectDir = C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\
