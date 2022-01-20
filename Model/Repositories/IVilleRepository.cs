@@ -7,7 +7,7 @@ namespace CabinetWebAPI.Model.Repositories
 {
     public interface IVilleRepository
     {
-        IEnumerable<Ville> GetVilles();
-        Ville GetVille(int villeId);
+        Task <IEnumerable<Ville>> GetVilles();
+        Task <Ville> GetVille(int villeId);
     }
 }

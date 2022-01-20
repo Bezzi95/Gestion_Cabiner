@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CabinetWebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Medcines")]
     [ApiController]
     public class MedcinesController : ControllerBase
     {
@@ -74,7 +74,7 @@ namespace CabinetWebAPI.Controllers
                     else
                     {
                         var createdMedcine = await medcineRepository.AddMedcine(medcine);
-                        return CreatedAtAction(nameof(GetMedcine), new { id = createdMedcine.id },
+                        return CreatedAtAction(nameof(GetMedcine), new{ id = createdMedcine.id },
                         createdMedcine);
                     }
 

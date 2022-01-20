@@ -39,15 +39,12 @@ namespace CabinetWebAPI.Model.Repositories
 
         public async Task<Medcine> GetMedcine(int medcineId)
         {
-            return await appDbContext.Medcines.
-                Include(m => m.Sexe).
-                Include(m => m.Specialite).
-                Include(m => m.Ville).
-                FirstOrDefaultAsync(m => m.id == medcineId);
+            return await appDbContext.Medcines
+                .Include(m => m.Sexe)
+                .Include(m => m.Specialite)
+                .Include(m => m.Ville)
+                .FirstOrDefaultAsync(m => m.id == medcineId);
         }
-
-
-
 
 
 
@@ -59,7 +56,12 @@ namespace CabinetWebAPI.Model.Repositories
 
         public async Task<IEnumerable<Medcine>> GetMedcines()
         {
-            return await appDbContext.Medcines.ToListAsync();
+            return await appDbContext.Medcines
+                .Include(m => m.Sexe)
+                .Include(m => m.Specialite)
+                .Include(m => m.Ville)
+                .ToListAsync();
+
         }
 
         public async Task<Medcine> UpdateMedcine(Medcine medcine)
@@ -75,6 +77,12 @@ namespace CabinetWebAPI.Model.Repositories
                 result.Adresse = medcine.Adresse;
                 result.Telephone = medcine.Telephone;
                 result.photo = medcine.photo;
+                
+                result.Sexeid = medcine.Sexeid;
+                result.Specialiteid = medcine.Specialiteid;
+                result.Villeid = medcine.Villeid;
+
+
 
                 await appDbContext.SaveChangesAsync();
 

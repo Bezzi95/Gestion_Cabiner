@@ -23,13 +23,7 @@ namespace CabinetWebAPI.Model
         [Required]
         public string Telephone { get; set; }
         [DisplayName("Photo de profil")]
-        public string photo { get; set; }
-       
-
-
-
-
-       
+        public string photo { get; set; }      
 
         public ICollection<Consultation> Consultations { get; set; }
         

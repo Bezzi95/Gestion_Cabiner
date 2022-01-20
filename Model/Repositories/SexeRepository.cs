@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,14 +15,14 @@ namespace CabinetWebAPI.Model.Repositories
             this.appDbContext = appDbContext;
         }
 
-        public Sexe GetSexe(int sexeId)
+        async Task<Sexe> ISexeRepository.GetSexe(int sexeId)
         {
-            return appDbContext.Sexes.FirstOrDefault(s => s.id == sexeId);
+            return  await appDbContext.Sexes.FirstOrDefaultAsync(s => s.id == sexeId);
         }
 
-        public IEnumerable<Sexe> GetSexes()
+       public async Task<IEnumerable<Sexe>> GetSexes()
         {
-            return appDbContext.Sexes;
+            return await appDbContext.Sexes.ToListAsync() ;
         }
     }
 }

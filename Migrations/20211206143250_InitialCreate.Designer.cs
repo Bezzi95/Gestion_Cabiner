@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CabinetWebAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211203155325_test")]
-    partial class test
+    [Migration("20211206143250_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

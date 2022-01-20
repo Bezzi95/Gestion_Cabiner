@@ -7,7 +7,7 @@ namespace CabinetWebAPI.Model.Repositories
 {
     public interface ISexeRepository
     {
-        IEnumerable<Sexe> GetSexes();
-        Sexe GetSexe(int sexeId);
+        Task<IEnumerable<Sexe>> GetSexes();
+        Task <Sexe> GetSexe(int sexeId);
     }
 }

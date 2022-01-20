@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace CabinetWebAPI.Model.Repositories
 {
-    interface ISpecialiteRepository
+    public interface ISpecialiteRepository
     {
-        IEnumerable<Specialite> GetSpecialites();
-        Specialite GetSpecialite(int specialiteId);
+        Task<IEnumerable<Specialite>> GetSpecialites();
+        Task<Specialite> GetSpecialite(int specialiteId);
 
     }
 }
