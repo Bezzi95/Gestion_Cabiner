@@ -1,0 +1,57 @@
+﻿@page "/MedecinDetails/{id}"
+@page "/MedecinDetails"
+@inherits MedecinDetailsBase
+
+
+    <h3 class="text-center">MedecinDetails</h3>
+
+    @if (Medcine == null || Medcine.Sexe == null || Medcine.Specialite == null || Medcine.Ville == null)
+    {
+        <div class="spinner"></div>
+    }
+    else
+    {
+        <div class="row justify-content-center m-3">
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text-center">@Medcine.prenom  @Medcine.nom</h1>
+                    </div>
+
+                    <div class="cart-body text-center">
+                        <img class="card-img-top" src="@Medcine.photo" />
+
+                        <h4> Medcine ID : @Medcine.id </h4>
+                        <h4> Email : @Medcine.Email </h4>
+                        <h4> Adresse : @Medcine.Adresse </h4>
+                        <h4> Telephone : @Medcine.Telephone </h4>
+                        <h4> Sexe : @Medcine.Sexe.nom.ToString() </h4>
+                        <h4> Specialite : @Medcine.Specialite.nom.ToString() </h4>
+                        <h4> Ville : @Medcine.Ville.nom.ToString() </h4>
+
+
+
+
+
+                        <button class="btn btn-primary" @onclick="@Button_Click">@ButtonText</button>
+                    </div>
+                    <div class="card-footer text-center @CssClass">
+                        <a href="/" class="btn btn-primary">Back</a>
+                        <a href="@($"EditMedecin/{Medcine.id}")" class="btn btn-primary">Edite</a>
+                        <a href="@($"DeleteMedecin /{Medcine.id}")" class="btn btn-danger">Delete</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    }
+
+
+
+
+
+
+

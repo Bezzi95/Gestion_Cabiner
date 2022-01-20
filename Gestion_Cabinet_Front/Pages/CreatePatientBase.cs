@@ -27,6 +27,7 @@ namespace Gestion_Cabinet_Front.Pages
             {
                 Date_naiss = DateTime.Now,
                 photo = "images/Patient.png"
+              
             };
         }
 
@@ -35,7 +36,7 @@ namespace Gestion_Cabinet_Front.Pages
             var result = await PatientService.CreatePatient(Patient);
             if( result != null)
             {
-                NavigationManager.NavigateTo("/");
+                NavigationManager.NavigateTo("/PatientList");
             }
         }
 

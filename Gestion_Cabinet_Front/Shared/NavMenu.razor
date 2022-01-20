@@ -5,6 +5,12 @@
     </button>
 </div>
 
+
+<li class="nav-item px-3">
+    <NavLink class="nav-link" href="/PatientList">
+        <span class="oi oi-person" aria-hidden="true"></span>Patient Listes
+    </NavLink>
+</li>
 <li class="nav-item px-3">
     <NavLink class="nav-link" href="/CreatePatient">
         <span class="oi oi-person" aria-hidden="true"></span>Create Patient
@@ -21,6 +27,21 @@
     </NavLink>
 </li>
 
+
+
+<li class="nav-item px-3">
+    <NavLink class="nav-link" href="/MedecinList">
+        <span class="oi oi-person" aria-hidden="true"></span>Medecin Listes
+    </NavLink>
+</li>
+<li class="nav-item px-3">
+<NavLink class="nav-link" href="/CreateMedecin">
+    <span class="oi oi-person" aria-hidden="true"></span>Create Medecin
+</NavLink>
+</li>
+
+
+
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <ul class="nav flex-column">
         <li class="nav-item px-3">
@@ -30,8 +51,14 @@
         </li>
 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     </ul>
 </div>
+
+
 
 @code {
     private bool collapseNavMenu = true;
@@ -41,5 +68,8 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+
+
     }
+
 }

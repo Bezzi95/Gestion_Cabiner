@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Patient\**" />
+    <Content Remove="Pages\Patient\**" />
+    <EmbeddedResource Remove="Pages\Patient\**" />
+    <None Remove="Pages\Patient\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 

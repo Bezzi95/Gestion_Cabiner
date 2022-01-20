@@ -30,14 +30,14 @@ namespace Gestion_Cabinet_Front.Pages
             var result = await PatientService.UpdatePatient(Patient);
             if (result != null)
             {
-                NavigationManager.NavigateTo("/");
+                NavigationManager.NavigateTo("/PatientList");
             }
         }
 
         protected async Task Delete_Click()
         {
             await PatientService.DeletePatient(Patient.id);
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo("/PatientList");
         }
     }
 }

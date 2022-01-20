@@ -1,5 +1,4 @@
-﻿
-using Gestion_Cabinet_Front.Services;
+﻿using Gestion_Cabinet_Front.Services;
 using Microsoft.AspNetCore.Components;
 using Model;
 using System;

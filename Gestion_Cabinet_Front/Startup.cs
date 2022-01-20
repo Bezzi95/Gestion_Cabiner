@@ -33,6 +33,19 @@ namespace Gestion_Cabinet_Front
                 client.BaseAddress = new Uri("https://localhost:44367/");
             });
             services.AddHttpClient<IConsultationService, ConsultationService>(client =>
+            services.AddHttpClient<IMedecinService, MedecinService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44367/");
+            });
+            services.AddHttpClient<ISexeService, SexeService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44367/");
+            });
+            services.AddHttpClient<ISpecialiteService, SpecialiteService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44367/");
+            });
+            services.AddHttpClient<IVilleService, VilleService>(client =>
             {
                 client.BaseAddress = new Uri("https://localhost:44367/");
             });

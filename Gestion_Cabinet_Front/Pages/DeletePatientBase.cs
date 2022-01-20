@@ -29,7 +29,7 @@ namespace Gestion_Cabinet_Front.Pages
         protected async Task Delete_Click()
         {
             await PatientService.DeletePatient(Patient.id);
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo("/PatientList");
         }
 
     }
