@@ -19,7 +19,11 @@ namespace Gestion_Cabinet_Front.Pages
             public List<Patient> Patients { get; set; } = new List<Patient>();
 
             public string PatientId { get; set; }
-            [Parameter]
+        [Inject]
+        public IMedecinService MedecinService { get; set; }
+        public List<Medcine> Medecins { get; set; } = new List<Medcine>();
+        public string MedecinId { get; set; }
+        [Parameter]
             public string Id { get; set; }
             [Inject]
             public NavigationManager NavigationManager { get; set; }
@@ -28,21 +32,26 @@ namespace Gestion_Cabinet_Front.Pages
             {
             consultation = await ConsultationService.GetConsultation(int.Parse(Id));
             Patients = (await PatientService.GetPatients()).ToList();
-                PatientId = consultation.Patientid.ToString();
-            }
-            protected async Task HandleValidSubmit()
-            {
-                consultation.Patientid = int.Parse(PatientId);
-                consultation.Medecinid = 2;
+            Medecins = (await MedecinService.GetMedecins()).ToList();
 
-                var result = await ConsultationService.UpdateConsultation(consultation);
+            PatientId = consultation.Patientid.ToString();
+                MedecinId = consultation.Medecinid.ToString();
+
+        }
+        protected async Task HandleValidSubmit()
+            {
+            //consultation.Patientid = int.Parse(PatientId);
+            //consultation.Medecinid = 2;
+            //consultation.Medecinid = int.Parse(MedecinId);
+
+            var result = await ConsultationService.UpdateConsultation(consultation);
                 if (result != null)
-                { NavigationManager.NavigateTo("/"); }
+                { NavigationManager.NavigateTo("/Consultations"); }
             }
         protected async Task Delete_Click()
         {
             await ConsultationService.DeleteConsultation(consultation.id);
-            NavigationManager.NavigateTo("/");
+            NavigationManager.NavigateTo("/Consultations");
         }
 
 

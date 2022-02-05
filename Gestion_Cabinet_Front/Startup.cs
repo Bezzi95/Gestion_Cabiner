@@ -33,6 +33,9 @@ namespace Gestion_Cabinet_Front
                 client.BaseAddress = new Uri("https://localhost:44367/");
             });
             services.AddHttpClient<IConsultationService, ConsultationService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44367/");
+            });
             services.AddHttpClient<IMedecinService, MedecinService>(client =>
             {
                 client.BaseAddress = new Uri("https://localhost:44367/");

@@ -29,8 +29,7 @@ namespace Gestion_Cabinet_Front.Pages
        public List<Ville> Villes { get; set; } = new List<Ville>();
        public string Villeid { get; set; }
 
-        [Parameter]
-        public string Id { get; set; }
+     
 
         [Inject]
         public NavigationManager NavigationManager { get; set; }
@@ -39,7 +38,12 @@ namespace Gestion_Cabinet_Front.Pages
         {
             Medcine = new Medcine
             {
-                photo = "images/Doctor.png"
+                photo = "images/Doctor.png",
+                Sexeid = 1,
+                Specialiteid = 1,
+                Villeid=1
+
+
             };
             Sexes = (await SexeService.GetSexes()).ToList();
             Sexeid = Medcine.Sexeid.ToString();
@@ -57,12 +61,6 @@ namespace Gestion_Cabinet_Front.Pages
            Medcine.Specialiteid = int.Parse(Specialiteid);
             Medcine.Villeid = int.Parse(Villeid);
 
-
-            //Medcine.Sexe = await SexeService.GetSexe(int.Parse(Sexeid));
-
-            //Medcine.Sexeid = 2;
-            // Medcine.Specialiteid = 4;
-           // Medcine.Villeid = 1;
             var result = await MedecinService.CreateMedecin(Medcine); 
             if(result != null)
             {

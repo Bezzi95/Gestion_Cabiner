@@ -16,8 +16,11 @@ namespace Gestion_Cabinet_Front.Pages
         [Inject]
         public IPatientService PatientService { get; set; }
         public List<Patient> Patients { get; set; } = new List<Patient>();
-
         public string PatientId { get; set; }
+        [Inject]
+        public IMedecinService MedecinService { get; set; }
+        public List<Medcine> Medecins { get; set; } = new List<Medcine>();
+        public string Medecinid { get; set; }
         [Parameter]
         public string Id { get; set; }
         [Inject]
@@ -34,12 +37,15 @@ namespace Gestion_Cabinet_Front.Pages
 
             };
             Patients = (await PatientService.GetPatients()).ToList();
+            Medecins = (await MedecinService.GetMedecins()).ToList();
+
             PatientId = consultation.Patientid.ToString();
+            Medecinid = consultation.Medecinid.ToString();
         }
         protected async  Task  HandleValidSubmit()
         {
             consultation.Patientid = int.Parse(PatientId);
-            consultation.Medecinid = 2;
+            consultation.Medecinid = int.Parse(Medecinid);
 
             var result = await ConsultationService.CreateConsultation(consultation);
             if (result!=null)

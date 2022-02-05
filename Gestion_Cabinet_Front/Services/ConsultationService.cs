@@ -17,28 +17,33 @@ namespace Gestion_Cabinet_Front.Services
         }
         public async Task<HttpResponseMessage> CreateConsultation(Consultation NewConsultation)
         {
-            return await httpClient.PostAsJsonAsync<Consultation>("api/Consultations", NewConsultation);
+            return await httpClient.PostAsJsonAsync<Consultation>("api/consultations", NewConsultation);
 
         }
 
-        public async Task DeleteConsultation(int id)
+        public async Task<HttpResponseMessage> DeleteConsultation(int id)
         {
-             await httpClient.DeleteAsync("api/Consultations/{id}");
+             return await httpClient.DeleteAsync("api/consultations/{id}");
         }
 
         public async Task<Consultation> GetConsultation(int id)
         {
-            return await httpClient.GetFromJsonAsync<Consultation>($"api/Consultations/{id}");
+            return await httpClient.GetFromJsonAsync<Consultation>($"api/consultations/{id}");
         }
 
         public async Task<IEnumerable<Consultation>> GetConsultations()
         {
-            return await httpClient.GetFromJsonAsync<Consultation[]>("api/Consultations");
+            return await httpClient.GetFromJsonAsync<Consultation[]>("api/consultations");
+        }
+
+        public async Task<IEnumerable<Consultation>> GetConsultationsByPatient(int id)
+        {
+            return await httpClient.GetFromJsonAsync<Consultation[]>($"/api/consultations/getbyPatient/{id}");
         }
 
         public async Task<HttpResponseMessage> UpdateConsultation(Consultation updatedConsultation)
         {
-            return await httpClient.PutAsJsonAsync<Consultation>("api/Consultations/{updatedConsultation.id}", updatedConsultation);
+            return await httpClient.PutAsJsonAsync<Consultation>("api/consultations/{updatedConsultation.id}", updatedConsultation);
         }
     }
 }

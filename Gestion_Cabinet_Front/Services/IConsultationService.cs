@@ -13,7 +13,11 @@ namespace Gestion_Cabinet_Front.Services
         Task<Consultation> GetConsultation(int id);
         Task<HttpResponseMessage> UpdateConsultation(Consultation updatedConsultation);
         Task<HttpResponseMessage> CreateConsultation(Consultation NewConsultation);
-        Task DeleteConsultation(int id);
+        Task<HttpResponseMessage> DeleteConsultation(int id);
+        Task<IEnumerable<Consultation>> GetConsultationsByPatient(int id);
+
+
+        
 
     }
 }

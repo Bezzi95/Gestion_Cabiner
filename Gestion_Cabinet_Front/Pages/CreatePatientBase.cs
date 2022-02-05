@@ -15,9 +15,7 @@ namespace Gestion_Cabinet_Front.Pages
 
         public Patient Patient { get; set; } = new Patient();
 
-        [Parameter]
-        public string Id { get; set; }
-
+        
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 

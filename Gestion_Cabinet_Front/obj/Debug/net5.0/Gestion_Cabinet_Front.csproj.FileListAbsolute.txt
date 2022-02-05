@@ -141,3 +141,19 @@ C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Ges
 C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\DeleteMedecin.razor.g.cs
 C:\Users\daoud\Documents\IPSAS\3Ginfo\.Net core\Projet\Gestion_Cabinet_Front\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\DeleteMedecin.razor.g.cs
 >>>>>>> Stashed changes
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\CreateMedecin.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\DeleteMedecin.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\EditMedecin.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\MedecinDetails.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\MedecinList.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\CreateMedecin.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\DeleteMedecin.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\EditMedecin.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\MedecinDetails.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\MedecinList.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\DeleteConsulation.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\DeleteConsulation.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\ConsultationDetails.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\ConsultationDetails.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\RazorDeclaration\Pages\ConsultationPatient.razor.g.cs
+C:\Users\Ramy\Source\Repos\Gestion_Cabiner\Gestion_Cabinet_Front\obj\Debug\net5.0\Razor\Pages\ConsultationPatient.razor.g.cs

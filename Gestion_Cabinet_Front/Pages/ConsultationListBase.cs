@@ -13,11 +13,14 @@ namespace Gestion_Cabinet_Front.Pages
         [Inject]
         public IConsultationService consultationService { get; set; }
         public IEnumerable<Consultation> Consultations { get; set; }
+        public Patient patient { get; set; } = new Patient();
+        public Medcine Medecin { get; set; } = new Medcine();
 
         protected override async Task OnInitializedAsync()
         {
             Consultations = new List<Consultation>();
             Consultations = (await consultationService.GetConsultations()).ToList();
+
         }
 
 
