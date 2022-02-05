@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\daoud\\Documents\\IPSAS\\3Ginfo\\.Net core\\Projet\\Gestion_Cabiner\\CabinetWebAPI.csproj": {}
+    "C:\\Users\\Ramy\\Source\\Repos\\Gestion_Cabiner-back\\CabinetWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\daoud\\Documents\\IPSAS\\3Ginfo\\.Net core\\Projet\\Gestion_Cabiner\\CabinetWebAPI.csproj": {
+    "C:\\Users\\Ramy\\Source\\Repos\\Gestion_Cabiner-back\\CabinetWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daoud\\Documents\\IPSAS\\3Ginfo\\.Net core\\Projet\\Gestion_Cabiner\\CabinetWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Ramy\\Source\\Repos\\Gestion_Cabiner-back\\CabinetWebAPI.csproj",
         "projectName": "CabinetWebAPI",
-        "projectPath": "C:\\Users\\daoud\\Documents\\IPSAS\\3Ginfo\\.Net core\\Projet\\Gestion_Cabiner\\CabinetWebAPI.csproj",
-        "packagesPath": "C:\\Users\\daoud\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daoud\\Documents\\IPSAS\\3Ginfo\\.Net core\\Projet\\Gestion_Cabiner\\obj\\",
+        "projectPath": "C:\\Users\\Ramy\\Source\\Repos\\Gestion_Cabiner-back\\CabinetWebAPI.csproj",
+        "packagesPath": "C:\\Users\\Ramy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ramy\\Source\\Repos\\Gestion_Cabiner-back\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\daoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ramy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -81,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

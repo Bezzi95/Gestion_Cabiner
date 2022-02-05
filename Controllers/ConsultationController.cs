@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CabinetWebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/consultations")]
     [ApiController]
     public class ConsultationController : ControllerBase
     {
@@ -151,8 +151,8 @@ namespace CabinetWebAPI.Controllers
             }
         }
         // GET api/<ConsultationController>/5
-        [HttpGet("getbyPatient/patientId")]
-        public async Task<ActionResult> GetConsultationsByPatient( [FromQuery] int patientId)
+        [HttpGet("getbyPatient/{patientId}")]
+        public async Task<ActionResult> GetConsultationsByPatient( int patientId)
         {
             try
             {
